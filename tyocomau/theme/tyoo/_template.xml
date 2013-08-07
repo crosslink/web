@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template><title>tyoo</title><url>tyoo</url><content>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;
+
+&lt;head&gt;
+
+&lt;title&gt;Vosao CMS - $page.title&lt;/title&gt;
+
+&lt;meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" /&gt;
+
+&lt;meta name="author" content="Erwin Aligam - styleshout.com" /&gt;
+
+&lt;meta name="description" content="Site Description Here" /&gt;
+
+&lt;meta name="keywords" content="keywords, here" /&gt;
+
+&lt;meta name="robots" content="index, follow, noarchive" /&gt;
+
+&lt;meta name="googlebot" content="noarchive" /&gt;
+
+
+&lt;link rel="stylesheet" type="text/css" media="screen" href="/file/theme/tyoo/css/screen.css" /&gt;
+
+&lt;script type="text/javascript"&gt;
+
+$(function() {
+  $('#quick-search').submit(function(){onSearch(); return false;});
+  $('#search').focus(function(){
+    if ($('#search').val() == 'Search...') {
+      $('#search').val('');
+    }  
+  });
+  $('#search').blur(function(){
+    if (!$('#search').val()) {
+      $('#search').val('Search...');
+    }  
+  });
+});
+
+function onSearch() {
+	var query = $('#search').val();
+	if (query) {
+	    location.href = '/search?query=' + query;
+	}
+}
+
+&lt;/script&gt;
+
+&lt;/head&gt;
+
+
+
+&lt;body&gt;
+
+
+
+&lt;!--header --&gt;
+
+&lt;div id="header-wrap"&gt;&lt;div id="header"&gt;
+
+
+
+	&lt;a name="top"&gt;&lt;/a&gt;
+
+
+
+	&lt;h1 id="logo-text"&gt;&lt;a href="/" title=""&gt;Vosao&lt;/a&gt;&lt;/h1&gt;
+
+	&lt;p id="slogan"&gt;Default site&lt;/p&gt;
+
+
+
+	&lt;div  id="nav"&gt;
+
+		&lt;ul&gt;
+
+			&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+
+			&lt;li&gt;&lt;a href="/tags"&gt;Tag cloud&lt;/a&gt;&lt;/li&gt;
+
+			&lt;li&gt;&lt;a href="/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
+
+			&lt;li&gt;&lt;a href="/support"&gt;Support&lt;/a&gt;&lt;/li&gt;
+
+			&lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+
+		&lt;/ul&gt;
+
+	&lt;/div&gt;
+
+
+
+   &lt;p id="rss"&gt;
+
+      &lt;a href="/_ah/plugin/rssatom/feed"&gt;Grab the RSS feed&lt;/a&gt;
+
+   &lt;/p&gt;
+
+
+
+   &lt;form id="quick-search" method="get"&gt;
+
+      &lt;fieldset class="search"&gt;
+
+         &lt;label for="qsearch"&gt;Search:&lt;/label&gt;
+
+         &lt;input class="tbox" id="search" type="text" name="qsearch" value="Search..." title="Start typing and hit ENTER" /&gt;
+
+         &lt;button type="submit" class="btn" title="Submit Search"&gt;Search&lt;/button&gt;
+
+      &lt;/fieldset&gt;
+
+   &lt;/form&gt;
+
+
+
+&lt;!--/header--&gt;
+
+&lt;/div&gt;&lt;/div&gt;
+
+	
+
+&lt;!-- content-outer --&gt;
+
+&lt;div id="content-wrap" class="clear" &gt;
+
+   &lt;div id="content"&gt;
+
+     &lt;div id="main"&gt;
+       $page.content
+     &lt;/div&gt;
+
+     ${service.findContent("/include/sidebar")}
+
+   &lt;/div&gt;
+
+&lt;!-- /content-out --&gt;
+
+&lt;/div&gt;
+
+		
+
+&lt;!-- footer-outer --&gt;
+
+&lt;div id="footer-outer" class="clear"&gt;&lt;div id="footer-wrap"&gt;
+
+
+
+	&lt;div id="gallery" class="clear"&gt;
+
+
+
+		&lt;h3&gt;Flickr Photos &lt;/h3&gt;
+
+
+
+		&lt;p class="thumbs"&gt;
+
+			&lt;a href="index.html"&gt;&lt;img src="/file/theme/tyoo/images/thumb.jpg" width="40" height="40" alt="thumbnail" /&gt;&lt;/a&gt;
+
+			&lt;a href="index.html"&gt;&lt;img src="/file/theme/tyoo/images/thumb.jpg" width="40" height="40" alt="thumbnail" /&gt;&lt;/a&gt;
+
+			&lt;a href="index.html"&gt;&lt;img src="/file/theme/tyoo/images/thumb.jpg" width="40" height="40" alt="thumbnail" /&gt;&lt;/a&gt;
+
+			&lt;a href="index.html"&gt;&lt;img src="/file/theme/tyoo/images/thumb.jpg" width="40" height="40" alt="thumbnail" /&gt;&lt;/a&gt;
+
+			&lt;a href="index.html"&gt;&lt;img src="/file/theme/tyoo/images/thumb.jpg" width="40" height="40" alt="thumbnail" /&gt;&lt;/a&gt;
+
+			&lt;a href="index.html"&gt;&lt;img src="/file/theme/tyoo/images/thumb.jpg" width="40" height="40" alt="thumbnail" /&gt;&lt;/a&gt;
+
+			&lt;a href="index.html"&gt;&lt;img src="/file/theme/tyoo/images/thumb.jpg" width="40" height="40" alt="thumbnail" /&gt;&lt;/a&gt;
+
+			&lt;a href="index.html"&gt;&lt;img src="/file/theme/tyoo/images/thumb.jpg" width="40" height="40" alt="thumbnail" /&gt;&lt;/a&gt;
+
+         &lt;a href="index.html"&gt;&lt;img src="/file/theme/tyoo/images/thumb.jpg" width="40" height="40" alt="thumbnail" /&gt;&lt;/a&gt;
+
+			&lt;a href="index.html"&gt;&lt;img src="/file/theme/tyoo/images/thumb.jpg" width="40" height="40" alt="thumbnail" /&gt;&lt;/a&gt;
+
+      &lt;/p&gt;
+
+
+
+    &lt;/div&gt;
+
+
+
+	 &lt;div class="col-a"&gt;
+
+
+
+		&lt;h3&gt;Contact Info&lt;/h3&gt;
+
+
+
+		&lt;p&gt;
+
+		&lt;strong&gt;Phone: &lt;/strong&gt;+1234567&lt;br/&gt;
+
+		&lt;strong&gt;Fax: &lt;/strong&gt;+123456789
+
+		&lt;/p&gt;
+
+
+
+		&lt;p&gt;&lt;strong&gt;Address: &lt;/strong&gt;123 Put Your Address Here&lt;/p&gt;
+
+        &lt;p&gt;&lt;strong&gt;E-mail: &lt;/strong&gt;me@coolblue.com&lt;/p&gt;
+
+		&lt;p&gt;Want more info - go to our &lt;a href="#"&gt;contact page&lt;/a&gt;&lt;/p&gt;
+
+
+
+      &lt;h3&gt;Updates&lt;/h3&gt;
+
+
+
+      &lt;ul class="subscribe-stuff"&gt;
+
+      	&lt;li&gt;&lt;a title="RSS" href="index.html" rel="nofollow"&gt;
+
+				&lt;img alt="RSS" title="RSS" src="/file/theme/tyoo/images/social_rss.png" /&gt;&lt;/a&gt;
+
+			&lt;/li&gt;
+
+      	&lt;li&gt;&lt;a title="Facebook" href="index.html" rel="nofollow"&gt;
+
+				&lt;img alt="Facebook" title="Facebook" src="/file/theme/tyoo/images/social_facebook.png" /&gt;&lt;/a&gt;
+
+			&lt;/li&gt;
+
+			&lt;li&gt;&lt;a title="Twitter" href="index.html" rel="nofollow"&gt;
+
+				&lt;img alt="Twitter" title="Twitter" src="/file/theme/tyoo/images/social_twitter.png" /&gt;&lt;/a&gt;
+
+			&lt;/li&gt;
+
+			&lt;li&gt;&lt;a title="E-mail this story to a friend!" href="index.html" rel="nofollow"&gt;
+
+				&lt;img alt="E-mail this story to a friend!" title="E-mail this story to a friend!" src="/file/theme/tyoo/images/social_email.png" /&gt;&lt;/a&gt;
+
+			&lt;/li&gt;
+
+      &lt;/ul&gt;
+
+
+
+      &lt;p&gt;Stay up to date. Subscribe via
+
+		&lt;a href="index"&gt;RSS&lt;/a&gt;, &lt;a href="index"&gt;Facebook&lt;/a&gt;,
+
+		&lt;a href="index"&gt;Twitter&lt;/a&gt; or &lt;a href="index"&gt;Email&lt;/a&gt;
+
+		&lt;/p&gt;
+
+
+
+	&lt;/div&gt;
+
+
+
+	&lt;div class="col-a"&gt;
+
+
+
+   	&lt;h3&gt;Site Links&lt;/h3&gt;
+
+
+
+		&lt;div class="footer-list"&gt;
+
+			&lt;ul&gt;
+
+				&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="/tags"&gt;Tag cloud&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="/archives"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="/suport"&gt;Support&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+
+			&lt;/ul&gt;
+
+		&lt;/div&gt;
+
+
+
+      &lt;h3&gt;Friends&lt;/h3&gt;
+
+
+
+		&lt;div class="footer-list"&gt;
+
+			&lt;ul&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;consequat molestie&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;sem justo&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;semper&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;magna sed purus&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;tincidunt&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;consequat molestie&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;magna sed purus&lt;/a&gt;&lt;/li&gt;
+
+			&lt;/ul&gt;
+
+		&lt;/div&gt;
+
+
+
+	&lt;/div&gt;
+
+
+
+   &lt;div class="col-a"&gt;
+
+
+
+      &lt;h3&gt;Credits&lt;/h3&gt;
+
+
+
+      &lt;div class="footer-list"&gt;
+
+			&lt;ul&gt;
+
+				&lt;li&gt;&lt;a href="http://jasonlarose.com/blog/110-free-classy-social-media-icons"&gt;
+
+						110 Free Classy Social Media Icons by Jason LaRose
+
+				    &lt;/a&gt;
+
+				&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="http://wefunction.com/2009/05/free-social-icons-app-icons/"&gt;
+
+						Free Social Media Icons by WeFunction
+
+				    &lt;/a&gt;
+
+				&lt;/li&gt;
+
+            &lt;li&gt;&lt;a href="http://www.famfamfam.com/lab/icons/"&gt;
+
+						Free Icons by FAMFAMFAM
+
+				    &lt;/a&gt;
+
+				&lt;/li&gt;
+
+			&lt;/ul&gt;
+
+		&lt;/div&gt;
+
+
+
+      &lt;h3&gt;Recent Comments&lt;/h3&gt;
+
+
+
+	   &lt;div class="recent-comments"&gt;
+
+         &lt;ul&gt;
+
+			&lt;li&gt;&lt;a href="index.html" title="Comment on title"&gt;Whoa! This one is really cool...&lt;/a&gt;&lt;br /&gt; &amp;#45; &lt;cite&gt;Erwin&lt;/cite&gt;&lt;/li&gt;
+
+			&lt;li&gt;&lt;a href="index.html" title="Comment on title"&gt;Wow. This theme is really awesome...&lt;/a&gt;&lt;br /&gt; &amp;#45; &lt;cite&gt;John Doe&lt;/cite&gt;&lt;/li&gt;
+
+			&lt;li&gt;&lt;a href="index.html" title="Comment on title"&gt;Type your comment here...&lt;/a&gt;&lt;br /&gt;&amp;#45; &lt;cite&gt;Naruto&lt;/cite&gt;&lt;/li&gt;
+
+			&lt;li&gt;&lt;a href="index.html" title="Comment on title"&gt;And don't forget this theme is free...&lt;/a&gt;&lt;br /&gt; &amp;#45; &lt;cite&gt;Shikamaru&lt;/cite&gt;&lt;/li&gt;
+
+         &lt;li&gt;&lt;a href="index.html" title="Comment on title"&gt;Just a simple reply test. Thanks...&lt;/a&gt;&lt;br /&gt; &amp;#45; &lt;cite&gt;ABCD&lt;/cite&gt;&lt;/li&gt;
+
+			&lt;/ul&gt;
+
+		&lt;/div&gt;
+
+
+
+   &lt;/div&gt;
+
+
+
+   &lt;div class="col-b"&gt;
+
+
+
+      &lt;h3&gt;Archives&lt;/h3&gt;
+
+
+
+	   &lt;div class="footer-list"&gt;
+
+			&lt;ul&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;January 2010&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;December 2009&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;November 2009&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;October 2009&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;September 2009&lt;/a&gt;&lt;/li&gt;
+
+			&lt;/ul&gt;
+
+		&lt;/div&gt;
+
+
+
+      &lt;h3&gt;Recent Bookmarks&lt;/h3&gt;
+
+
+
+	   &lt;div class="footer-list"&gt;
+
+			&lt;ul&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;5 Must Have Sans Serif Fonts for Web Designers&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;The Basics of CSS3&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;10 Simple Tips for Launching a Website&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;24 ways: Working With RGBA Colour&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;30 Blog Designs with Killer Typography&lt;/a&gt;&lt;/li&gt;
+
+				&lt;li&gt;&lt;a href="index.html"&gt;The Principles of Great Design&lt;/a&gt;&lt;/li&gt;
+
+			&lt;/ul&gt;
+
+		&lt;/div&gt;
+
+
+
+	&lt;/div&gt;
+
+
+
+&lt;!-- /footer-outer --&gt;
+
+&lt;/div&gt;&lt;/div&gt;
+
+
+
+&lt;!-- footer-bottom --&gt;
+
+&lt;div id="footer-bottom"&gt;
+
+
+
+	&lt;p class="bottom-left"&gt;
+
+		&amp;copy; 2010 &lt;strong&gt;Copyright Info&lt;/strong&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;
+
+		&lt;a href="http://www.bluewebtemplates.com/" title="Website Templates"&gt;website templates&lt;/a&gt; by &lt;a href="http://www.styleshout.com/"&gt;styleshout&lt;/a&gt;
+
+	&lt;/p&gt;
+
+
+
+	&lt;p class="bottom-right"&gt;
+
+		&lt;a href="http://jigsaw.w3.org/css-validator/check/referer"&gt;CSS&lt;/a&gt; |
+
+	   &lt;a href="http://validator.w3.org/check/referer"&gt;XHTML&lt;/a&gt;	|
+
+		&lt;a href="index.html"&gt;Home&lt;/a&gt; |
+
+		&lt;a href="index.html"&gt;Sitemap&lt;/a&gt; |
+
+		&lt;a href="index.html"&gt;RSS Feed&lt;/a&gt; |
+
+      &lt;strong&gt;&lt;a href="#top"&gt;Back to Top&lt;/a&gt;&lt;/strong&gt;
+
+   &lt;/p&gt;
+
+
+
+&lt;!-- /footer-bottom--&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</content></template>
